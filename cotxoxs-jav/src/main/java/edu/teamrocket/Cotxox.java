@@ -38,3 +38,26 @@ public class Cotxox {
 		System.out.println("Total: " + carrera.getCosteEsperado() + "€");
 		
 		System.out.println("\n#####"  + "\t Get a ride: Driver: \t" + "#####\n" );
+ArrayList<Conductor> poolConductores = new ArrayList<>();
+		Conductor conductor = null;
+		
+		// creamos objetos conductor y los metemos en el array
+		
+		String[] nombres = {"Samantha", "Fox", "Mola"};
+		for(String nombre: nombres){
+			conductor = new Conductor(nombre);
+			poolConductores.add(conductor);
+		}
+		
+		String[] matricula = {"4ABC123", "5DHJ444", "7JKK555"};
+		String[] modelos = {"Chevy Malibu", "Toyota Prius", "Mercedes A"};
+		
+		int index = 0;
+		// conductora.getClass().getFields();
+		for(Conductor conductora: poolConductores){			
+			conductora.setMatricula(matricula[index]);
+			conductora.setModelo(modelos[index]);
+			// suponemos que las conductoras tienen una valoracion inicial de 4 stars
+			conductora.setValoracion((byte) 4);
+			index++;
+		}

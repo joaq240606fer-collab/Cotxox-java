@@ -61,3 +61,45 @@ ArrayList<Conductor> poolConductores = new ArrayList<>();
 			conductora.setValoracion((byte) 4);
 			index++;
 		}
+PoolConductores conductores = new PoolConductores(poolConductores);
+		
+				
+		carrera.asignarConductor(conductores);
+
+		
+		System.out.println("Driver: " + carrera.getConductor().getNombre());
+		System.out.println("Type: " + carrera.getConductor().getModelo());
+		System.out.println("Matricula: " + carrera.getConductor().getMatricula());
+		System.out.println("Stars: " + carrera.getConductor().getValoracion());
+		System.out.println("From: " + carrera.getOrigen());
+		System.out.println("To: " + carrera.getDestino());
+		boolean ocupado = carrera.getConductor().isOcupado();
+		if(ocupado){
+			System.out.println("Disponible para ti");
+		}
+		else {
+			System.out.println("Esta conductora no esta disponible :/");
+		}
+		
+		
+		System.out.println("\n#####"  + "\t Pay and Tip: \t" + "#####\n" );
+		
+		carrera.realizarPago(carrera.getCosteEsperado());
+		carrera.recibirPropina(1);
+		carrera.liberarConductor();
+		
+		System.out.println("Driver: " + carrera.getConductor().getNombre());
+		System.out.println("TIP: " + carrera.getPropina());
+		System.out.println("Visa: " + carrera.getTarjetaCredito());
+		System.out.println("Total: " + carrera.getCosteTotal());
+		System.out.println("Ocupado?: " + carrera.getConductor().isOcupado());
+		
+		
+		System.out.println("\n#####"  + "\t Rate your driver: \t" + "#####\n" );
+		
+		carrera.getConductor().setValoracion((byte) 5);
+		
+		System.out.println("Driver: " + carrera.getConductor().getNombre());
+		System.out.println("Stars: " + carrera.getConductor().getValoracion());
+	}
+}

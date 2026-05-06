@@ -1,7 +1,8 @@
 {
     "folder-color.pathColors": [],
     "conventionalCommits.scopes": [
-        "Configuracion inicial"
+        "Configuracion inicial",
+        "Careras "
     ],
     "java.configuration.updateBuildConfiguration": "interactive"
 }

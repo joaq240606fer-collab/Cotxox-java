@@ -41,7 +41,6 @@ public class Cotxox {
 ArrayList<Conductor> poolConductores = new ArrayList<>();
 		Conductor conductor = null;
 		
-		// creamos objetos conductor y los metemos en el array
 		
 		String[] nombres = {"Samantha", "Fox", "Mola"};
 		for(String nombre: nombres){
@@ -53,11 +52,9 @@ ArrayList<Conductor> poolConductores = new ArrayList<>();
 		String[] modelos = {"Chevy Malibu", "Toyota Prius", "Mercedes A"};
 		
 		int index = 0;
-		// conductora.getClass().getFields();
 		for(Conductor conductora: poolConductores){			
 			conductora.setMatricula(matricula[index]);
 			conductora.setModelo(modelos[index]);
-			// suponemos que las conductoras tienen una valoracion inicial de 4 stars
 			conductora.setValoracion((byte) 4);
 			index++;
 		}
